@@ -1,0 +1,35 @@
+section {
+  width: 250px;
+  height: 300;
+}
+
+input {
+  width: 100%;
+  background-color: black;
+  height: 80px;
+  padding-block-end: 2px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+}
+
+.btn {
+  height: 50px;
+  width: 50px;
+  background-color: grey;
+  color: yellow;
+  border-radius: 50%;
+  border: grey;
+}
+.btn-operation {
+  background-color: #ff9900;
+  color: black;
+}
+
+form {
+  border: 5px black solid;
+  background-color: black;
+}

@@ -1,0 +1,51 @@
+
+section{
+    width: 250px;
+    height: 300;
+}
+input{
+    width: 100%;
+    background-color: black;
+    height: 80px;
+    padding-block-end: 2px;
+}
+// .firstrow {
+//     grid-area: firstrow;
+//     text-align: center;
+//   }
+//   .firstrow {
+//     grid-area: firstrow;
+//     text-align: center;
+//   }
+//   .firstrow {
+//     grid-area: firstrow;
+//     text-align: center;
+//   }
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+}
+.btn {
+    height: 50px;
+    width: 50px;
+    background-color: grey;
+    color: yellow;
+    border-radius: 50%;
+    border: grey;
+      &-operation{
+       background-color: rgb(255, 153, 0);
+       color:white;
+      }
+      &-el{
+        background-color: rgb(255, 153, 0);
+        color: black;
+       }
+}
+
+  form {
+  border: 5px black solid;
+  background-color: black;
+  }
+
+  

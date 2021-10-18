@@ -1,0 +1,31 @@
+.btn{
+    background-color: grey;
+    color: yellow;
+    border-radius: 50%;
+    border: grey;
+
+    
+}
+.grid{
+    display: grid;
+    grid-auto-columns: 1fr 1fr 1fr 1fr;
+}
+button {
+    height: 50px;
+    width: 50px;
+    background-color: grey;
+    color: yellow;
+    border-radius: 50%;
+    border: grey;
+  &_operation{
+      background-color: yellow;
+      color: black;
+  }  
+}
+
+  form {
+  border: 5px black solid;
+  background-color: black;
+  }
+
+  

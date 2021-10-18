@@ -1,0 +1,45 @@
+section {
+  width: 250px;
+  height: 300px;
+}
+
+.calculator-screen {
+  width: 100%;
+  background-color: black;
+  height: 80px;
+  margin: 0%;
+  border-color: black;
+  color: aliceblue;
+  font-size: x-large;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+}
+
+.btn {
+  height: 50px;
+  width: 50px;
+  background-color: #332f2f;
+  color: white;
+  border-radius: 50%;
+  border: grey;
+}
+.btn :hover {
+  background-color: #a536c7;
+}
+.btn-operation {
+  background-color: #ff9900;
+  color: white;
+}
+.btn-el {
+  background-color: grey;
+  color: black;
+}
+
+form {
+  border: 5px black solid;
+  background-color: black;
+}
