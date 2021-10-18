@@ -1,18 +1,16 @@
-.btn {
-  background-color: grey;
-  color: yellow;
-  border-radius: 50%;
-  border: grey;
-}
-
 section {
   width: 250px;
-  height: 300;
+  height: 300px;
 }
 
 input {
   width: 100%;
-  background-color: #eed5d5;
+  background-color: black;
+  height: 80px;
+  margin: 0%;
+  border-color: black;
+  color: aliceblue;
+  font-size: x-large;
 }
 
 .grid {
@@ -21,16 +19,23 @@ input {
   grid-template-rows: auto;
 }
 
-button {
+.btn {
   height: 50px;
   width: 50px;
-  background-color: grey;
-  color: yellow;
+  background-color: #332f2f;
+  color: white;
   border-radius: 50%;
   border: grey;
 }
-button_operation {
-  background-color: yellow;
+.btn :hover {
+  background-color: #a536c7;
+}
+.btn-operation {
+  background-color: #ff9900;
+  color: white;
+}
+.btn-el {
+  background-color: grey;
   color: black;
 }
 
