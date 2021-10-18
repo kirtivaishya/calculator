@@ -22,6 +22,7 @@ buttons.forEach(button => {
                    currentOperator=buttonContent;
                    outputValue=calculate(outputValues[0],outputValues[1],previousOperator);
                    inputtext.value=outputValue;
+                   if(currentOperator!="=")
                    outputValue=outputValue+currentOperator;
                    previousOperator=currentOperator;
                 }else{
@@ -71,7 +72,9 @@ buttons.forEach(button => {
     } else if (operator === '/') {
       return firstOperand / secondOperand;
     }else if (operator === '%') {
-        return secondOperand*0.01;
+        return firstOperand*0.01;
+      }else if (operator === '=') {
+        return firstOperand;
       }
   
     return secondOperand;

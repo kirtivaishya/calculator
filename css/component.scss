@@ -48,15 +48,41 @@ section{
         background-color: grey;
         color: black;
        }
-       :hover{
-        background-color: rgb(165, 54, 199);
+     &:hover{
+        background-color: rgb(165, 81, 190);
     }
        
 }
 
-  form,.layout {
+  .layout {
   border: 5px black solid;
   background-color: black;
   }
+
+  
+@media (max-width: 800px) {
+    section{
+        width: 350px;
+        height: 750px;
+    }
+    .calculator-screen{
+        width: 100%;
+        background-color: black;
+        height: 250px;
+        margin: 0%;
+        border-color: black;
+        color: aliceblue;
+        font-size: x-large;
+    }
+    .grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto;
+       }
+       .btn {
+        height: 80px;
+        width: 80px;   
+       }
+}
 
   

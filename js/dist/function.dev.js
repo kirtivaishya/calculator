@@ -24,7 +24,7 @@ buttons.forEach(function (button) {
         currentOperator = buttonContent;
         outputValue = calculate(outputValues[0], outputValues[1], previousOperator);
         inputtext.value = outputValue;
-        outputValue = outputValue + currentOperator;
+        if (currentOperator != "=") outputValue = outputValue + currentOperator;
         previousOperator = currentOperator;
       } else {
         previousOperator = buttonContent;
@@ -70,7 +70,9 @@ function calculate(firstOperand, secondOperand, operator) {
   } else if (operator === '/') {
     return firstOperand / secondOperand;
   } else if (operator === '%') {
-    return secondOperand * 0.01;
+    return firstOperand * 0.01;
+  } else if (operator === '=') {
+    return firstOperand;
   }
 
   return secondOperand;

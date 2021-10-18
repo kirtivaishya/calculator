@@ -27,9 +27,6 @@ section {
   border-radius: 50%;
   border: grey;
 }
-.btn :hover {
-  background-color: #a536c7;
-}
 .btn-operation {
   background-color: #ff9900;
   color: white;
@@ -38,8 +35,39 @@ section {
   background-color: grey;
   color: black;
 }
+.btn:hover {
+  background-color: #a551be;
+}
 
-form, .layout {
+.layout {
   border: 5px black solid;
   background-color: black;
+}
+
+@media (max-width: 800px) {
+  section {
+    width: 350px;
+    height: 750px;
+  }
+
+  .calculator-screen {
+    width: 100%;
+    background-color: black;
+    height: 250px;
+    margin: 0%;
+    border-color: black;
+    color: aliceblue;
+    font-size: x-large;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+  }
+
+  .btn {
+    height: 80px;
+    width: 80px;
+  }
 }
