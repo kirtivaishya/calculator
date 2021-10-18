@@ -5,19 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>calculator</title>
     <link rel="stylesheet" href="css/main.css">
-    
+    <script src="https://kit.fontawesome.com/6a875c2d7c.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <section >
-        <!-- <form action="" > -->
+        <!-- <form action="submit" class="layout" > -->
             <div class="layout">
-            <input value=0 name="output">
+            <input value="" class="calculator-screen" name="output" disabled>
             <br>
             <div class="grid">
-            <button class="btn btn-el" id="percentage">%</button>
-            <button class="btn btn-el" id="CE">CE</button>
-            <button class="btn btn-el"  id="C">C</button>
-            <button class="btn btn-operation" id="backspace">backspace</button>
+            <button class="btn btn-operation btn-el" id="percentage">%</button>
+            <button class="btn btn-el" id="backspace"> <i class="fas fa-backspace"></i> </button>
+            <button type="reset" class="btn btn-el"  id="C">C</button>
+            <button class="btn btn-operation">/</button>
+            <!-- <button class="btn btn-operation"><i class="fas fa-divide"></i></button> -->
             <button class="btn" id="7">7</button>
             <button class="btn" name="number" value=8>8</button>
             <button class="btn" name="number" value=9 id="9">9</button>
@@ -32,8 +33,8 @@
             <button class="btn btn-operation" id="+">+</button>            
             <button class="btn" id="prefix">+/-</button>
             <button class="btn" name="number" value=0 id="0">0</button>
-            <button class="btn" id="dot">.</button>
-            <button class="btn btn-operation" id="equal">=</button>
+            <button class="btn" name="number" id="dot">.</button>
+            <button type="submit" class="btn btn-operation" id="equal">=</button>
         </div>
     </div>
         <!-- </form> -->

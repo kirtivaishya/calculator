@@ -3,7 +3,7 @@ section {
   height: 300px;
 }
 
-input {
+.calculator-screen {
   width: 100%;
   background-color: black;
   height: 80px;
@@ -27,9 +27,6 @@ input {
   border-radius: 50%;
   border: grey;
 }
-.btn :hover {
-  background-color: #a536c7;
-}
 .btn-operation {
   background-color: #ff9900;
   color: white;
@@ -38,8 +35,11 @@ input {
   background-color: grey;
   color: black;
 }
+.btn :hover {
+  background-color: #a536c7;
+}
 
-form {
+form, .layout {
   border: 5px black solid;
   background-color: black;
 }

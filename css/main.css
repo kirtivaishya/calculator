@@ -3,7 +3,7 @@ section {
   height: 300px;
 }
 
-input {
+.calculator-screen {
   width: 100%;
   background-color: black;
   height: 80px;
@@ -39,7 +39,7 @@ input {
   color: black;
 }
 
-form {
+form, .layout {
   border: 5px black solid;
   background-color: black;
 }
