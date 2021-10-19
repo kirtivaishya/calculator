@@ -1,6 +1,12 @@
 "use strict";
 
-// **********Add the value to input ***********
+var calculator = {
+  displayValue: '0',
+  firstOperand: null,
+  waitingForSecondOperand: false,
+  operator: null
+}; // **********Add the value to input ***********
+
 var inputtext = document.getElementsByTagName("input")[0]; //console.log(inputtext);
 
 var buttons = document.querySelectorAll("button"); //console.log(buttons);
@@ -12,19 +18,20 @@ buttons.forEach(function (button) {
   button.addEventListener('click', function (event) {
     event.preventDefault(); //console.log(button.value); 
 
-    var buttonContent = button.innerText;
+    var buttonContent = button.value;
 
-    if (button.classList.contains("btn-el")) {
+    if (button.classList.contains("btn__el")) {
       reset();
     }
 
-    if (button.classList.contains("btn-operation")) {
+    if (button.classList.contains("btn__operation")) {
       if (previousOperator != "") {
         var outputValues = outputValue.split(previousOperator);
         currentOperator = buttonContent;
         outputValue = calculate(outputValues[0], outputValues[1], previousOperator);
-        inputtext.value = outputValue;
-        if (currentOperator != "=") outputValue = outputValue + currentOperator;
+        inputtext.value = outputValue; // if (currentOperator != "=")
+
+        outputValue = outputValue + currentOperator;
         previousOperator = currentOperator;
       } else {
         previousOperator = buttonContent;
