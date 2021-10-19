@@ -14,11 +14,60 @@ describe('The main page loads', () => {
   
       // Act
       cy.get("#7").click();
-      cy.get("#+").click();
+      cy.get("#plus").click();
       cy.get("#2").click();
       cy.get("#equal").click();
   
       // Assert
       cy.get(".calculator-screen").should("have.value", "9");
     }) 
+    it('checks 7 - 2 equals 5', () => {
+        // Arrange
+        cy.visit('http://127.0.0.1:5500/index.html')
+    
+        // Act
+        cy.get("#7").click();
+        cy.get("#substract").click();
+        cy.get("#2").click();
+        cy.get("#equal").click();
+    
+        // Assert
+        cy.get(".calculator-screen").should("have.value", "5");
+      })
+      it('checks 7 * 2 equals 14', () => {
+        // Arrange
+        cy.visit('http://127.0.0.1:5500/index.html')
+    
+        // Act
+        cy.get("#7").click();
+        cy.get("#mutiply").click();
+        cy.get("#2").click();
+        cy.get("#equal").click();
+    
+        // Assert
+        cy.get(".calculator-screen").should("have.value", "14");
+      })
+      it('checks clear screen', () => {
+        // Arrange
+        cy.visit('http://127.0.0.1:5500/index.html')
+    
+        // Act
+        cy.get("#C").click();       
+    
+        // Assert
+        cy.get(".calculator-screen").should("have.value","");
+      })
+      it('checks 8/2 equals 4', () => {
+        // Arrange
+        cy.visit('http://127.0.0.1:5500/index.html')
+    
+        // Act
+        cy.get("#8").click();
+        cy.get("#divide").click();
+        cy.get("#2").click();
+        cy.get("#equal").click();
+    
+        // Assert
+        cy.get(".calculator-screen").should("have.value", "4");
+      })
   })
