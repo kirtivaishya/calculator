@@ -6,7 +6,7 @@ const calculator = {
   };
 
 // **********Add the value to input ***********
-var inputtext = document.getElementsByTagName("input")[0]; //console.log(inputtext);
+//var inputtext = document.getElementsByTagName("input")[0]; //console.log(inputtext);
 
 var buttons = document.querySelectorAll("button"); //console.log(buttons);
 
@@ -28,14 +28,16 @@ buttons.forEach(function (button) {
         var outputValues = outputValue.split(previousOperator);
         currentOperator = buttonContent;
         outputValue = calculate(outputValues[0], outputValues[1], previousOperator);
-        inputtext.value = outputValue;
+        updateDisplay()
+        //inputtext.value = outputValue;
         // if (currentOperator != "=")
         outputValue = outputValue + currentOperator;
         previousOperator = currentOperator;
       } else {
         previousOperator = buttonContent;
         outputValue = outputValue + buttonContent;
-        inputtext.value = outputValue;
+        updateDisplay()
+        //inputtext.value = outputValue;
       } // submit(operator);
 
     }
@@ -43,14 +45,24 @@ buttons.forEach(function (button) {
     if (button.name == "number") {
       if (outputValue != "") {
         outputValue = outputValue + buttonContent;
-        inputtext.value = outputValue;
+       // inputtext.value = outputValue;
+       updateDisplay()
       } else {
-        inputtext.value = button.innerText;
+        //inputtext.value = button.innerText;
+        updateDisplay()
         outputValue = inputtext.value;
       }
     }
   });
 });
+
+//refatored the update method 
+const updateDisplay=()=>{
+    const display = document.querySelector('.calculator-screen');
+    display.value = calculator.displayValue;
+  }
+  
+  updateDisplay();
 
 var reset = function reset() {
   inputtext.value = "";
