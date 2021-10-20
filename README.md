@@ -19,7 +19,7 @@ Css files
 javascript files 
 cypress test cases and js files
 
-# Calculotor looks like:
+# Calculator looks like:
 [calculator](Capture.PNG)<img width="260" alt="Capture" src="https://user-images.githubusercontent.com/66835272/138044261-60aeb2f2-f4df-46ea-8ffc-fb1b86d26114.PNG">
 
 
