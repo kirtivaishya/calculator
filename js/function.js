@@ -29,6 +29,12 @@ buttons.forEach(function (button) {
       updateDisplay();
       return;
     }
+
+    if (button.classList.contains("btn__operation--prefix")) {
+      prefix(button.value);
+      updateDisplay();
+      return;
+    }
     if (button.classList.contains("btn__operation--percenatge")) {
      handlePercentage(button.value);
       updateDisplay();
@@ -129,17 +135,16 @@ const inputDigit=(digit)=> {
   }
   //backspace method 
   const backspace=()=>{
-    let displayValue = calculator.displayValue;
+    let {displayValue} = calculator;
     //let arrString =[];
     if(displayValue!=null && !isNaN(displayValue)){
       displayValue= displayValue.substr(0, displayValue.length - 1)
       // arrString = Array.from(displayValue);
       // arrString.pop();
     }
-    calculate.displayValue=displayValue;
-    calculate.firstOperand =displayValue;
-    return;
-  }
+    calculator.displayValue=displayValue;
+    calculator.firstOperand =displayValue;
+     }
 //refatored the update method 
 const updateDisplay=()=>{
     const display = document.querySelector('.calculator-screen');
@@ -157,12 +162,22 @@ var reset = function reset() {
   calculator.waitingForSecondOperand = false;
   calculator.operator = null;
   return;
-}; //  const submit=(operator)=>{
-//         console.log("on sumbit");
-//         return;
-//  }
+}; 
 
-
+const prefix=(operator)=>{
+  let {displayValue} = calculator;
+    //let arrString =[];
+    if(displayValue!=null && !displayValue.includes("-")){
+      displayValue= "-" +displayValue;
+      // arrString = Array.from(displayValue);
+      // arrString.pop();
+    }else{
+      displayValue=displayValue.substr(1, displayValue.length)
+    }
+    calculator.displayValue=displayValue;
+    calculator.firstOperand =displayValue;
+}
+//calculate function
 const calculate=(firstOperand, secondOperand, operator)=> {
   firstOperand = parseFloat(firstOperand);
   secondOperand = parseFloat(secondOperand);

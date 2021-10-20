@@ -4,10 +4,11 @@ section {
 }
 
 .calculator-screen {
-  width: 100%;
+  width: 90%;
   background-color: black;
   height: 50px;
   margin: 0%;
+  padding: 2%;
   border-color: black;
   color: aliceblue;
   font-size: x-large;
@@ -35,6 +36,10 @@ section {
   background-color: grey;
   color: black;
 }
+.btn__operation--prefix {
+  background-color: #332f2f;
+  color: white;
+}
 .btn__el {
   background-color: grey;
   color: black;
@@ -59,7 +64,7 @@ section {
   }
 
   .calculator-screen {
-    width: 100%;
+    width: 90%;
     background-color: black;
     height: 100px;
     margin: 0%;

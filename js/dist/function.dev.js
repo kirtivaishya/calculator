@@ -31,6 +31,12 @@ buttons.forEach(function (button) {
       return;
     }
 
+    if (button.classList.contains("btn__operation--prefix")) {
+      prefix(button.value);
+      updateDisplay();
+      return;
+    }
+
     if (button.classList.contains("btn__operation--percenatge")) {
       handlePercentage(button.value);
       updateDisplay();
@@ -138,9 +144,8 @@ var backspace = function backspace() {
     // arrString.pop();
   }
 
-  calculate.displayValue = displayValue;
-  calculate.firstOperand = displayValue;
-  return;
+  calculator.displayValue = displayValue;
+  calculator.firstOperand = displayValue;
 }; //refatored the update method 
 
 
@@ -160,10 +165,21 @@ var reset = function reset() {
   calculator.waitingForSecondOperand = false;
   calculator.operator = null;
   return;
-}; //  const submit=(operator)=>{
-//         console.log("on sumbit");
-//         return;
-//  }
+};
+
+var prefix = function prefix(operator) {
+  var displayValue = calculator.displayValue; //let arrString =[];
+
+  if (displayValue != null && !displayValue.includes("-")) {
+    displayValue = "-" + displayValue; // arrString = Array.from(displayValue);
+    // arrString.pop();
+  } else {
+    displayValue = displayValue.substr(1, displayValue.length);
+  }
+
+  calculator.displayValue = displayValue;
+  calculator.firstOperand = displayValue;
+}; //calculate function
 
 
 var calculate = function calculate(firstOperand, secondOperand, operator) {

@@ -3,10 +3,11 @@ section{
     height: 300px;
 }
 .calculator-screen{
-    width: 100%;
+    width: 90%;
     background-color: black;
     height: 50px;
     margin: 0%;
+    padding:2%;
     border-color: black;
     color: aliceblue;
     font-size: x-large;
@@ -47,11 +48,15 @@ section{
         background-color: grey;
         color: black;
       }
+      &--prefix{
+        background-color: rgb(51, 47, 47);
+        color: white;
+      }
         }
       &__el{
         background-color: grey;
         color: black;
-        &--backspace{
+      &--backspace{
             background-color: grey;
             color: black; 
         }
@@ -74,7 +79,7 @@ section{
         height: 750px;
     }
     .calculator-screen{
-        width: 100%;
+        width: 90%;
         background-color: black;
         height: 100px;
         margin: 0%;
