@@ -43,11 +43,19 @@ section{
     //     background-color: rgb(27, 164, 189);
     //     cursor:pointer;
     //    }
+      &--percenatge{
+        background-color: grey;
+        color: black;
       }
+        }
       &__el{
         background-color: grey;
         color: black;
-       }
+        &--backspace{
+            background-color: grey;
+            color: black; 
+        }
+    }
      &:hover{
         background-color: rgb(165, 81, 190);
     }

@@ -25,6 +25,18 @@ buttons.forEach(function (button) {
       return;
     }
 
+    if (button.classList.contains("btn__el--backspace")) {
+      backspace();
+      updateDisplay();
+      return;
+    }
+
+    if (button.classList.contains("btn__operation--percenatge")) {
+      handlePercentage(button.value);
+      updateDisplay();
+      return;
+    }
+
     if (button.classList.contains("btn__operation")) {
       handleOperator(button.value);
       updateDisplay();
@@ -99,6 +111,36 @@ var inputDigit = function inputDigit(digit) {
   } else {
     calculator.displayValue = displayValue === '0' ? digit : displayValue + digit;
   }
+}; //handle percentage 
+
+
+var handlePercentage = function handlePercentage(Operator) {
+  var firstOperand = calculator.firstOperand,
+      displayValue = calculator.displayValue;
+
+  if (firstOperand == null && !isNaN(displayValue)) {
+    calculator.firstOperand = displayValue;
+  }
+
+  if (Operator === "%" && !isNaN(calculator.firstOperand)) {
+    var result = calculate(calculator.firstOperand, displayValue, Operator);
+    calculator.displayValue = result;
+    calculator.firstOperand = result; //return;
+  }
+}; //backspace method 
+
+
+var backspace = function backspace() {
+  var displayValue = calculator.displayValue; //let arrString =[];
+
+  if (displayValue != null && !isNaN(displayValue)) {
+    displayValue = displayValue.substr(0, displayValue.length - 1); // arrString = Array.from(displayValue);
+    // arrString.pop();
+  }
+
+  calculate.displayValue = displayValue;
+  calculate.firstOperand = displayValue;
+  return;
 }; //refatored the update method 
 
 

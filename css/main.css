@@ -31,7 +31,15 @@ section {
   background-color: #ff9900;
   color: white;
 }
+.btn__operation--percenatge {
+  background-color: grey;
+  color: black;
+}
 .btn__el {
+  background-color: grey;
+  color: black;
+}
+.btn__el--backspace {
   background-color: grey;
   color: black;
 }

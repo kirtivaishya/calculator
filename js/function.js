@@ -24,10 +24,19 @@ buttons.forEach(function (button) {
       updateDisplay();
       return;
     }
-
+    if (button.classList.contains("btn__el--backspace")) {
+      backspace();
+      updateDisplay();
+      return;
+    }
+    if (button.classList.contains("btn__operation--percenatge")) {
+     handlePercentage(button.value);
+      updateDisplay();
+      return;
+    }
     if (button.classList.contains("btn__operation")) {
         handleOperator(button.value);
-		updateDisplay();
+		    updateDisplay();
         return;
     //   if (previousOperator != "") {
     //     var outputValues = outputValue.split(previousOperator);
@@ -70,7 +79,7 @@ buttons.forEach(function (button) {
 
 //handle operator 
 const handleOperator=(nextOperator)=>{
-const { firstOperand, displayValue, operator } = calculator
+let { firstOperand, displayValue, operator } = calculator
 const inputValue = parseFloat(displayValue);
 
     if (operator && calculator.waitingForSecondOperand)  {
@@ -87,6 +96,7 @@ const inputValue = parseFloat(displayValue);
     calculator.displayValue = result;
     calculator.firstOperand = result;
     }
+   
 
     calculator.waitingForSecondOperand = true;
     calculator.operator = nextOperator;
@@ -100,7 +110,35 @@ const inputDigit=(digit)=> {
       calculator.waitingForSecondOperand = false;
     } else {
       calculator.displayValue = displayValue === '0' ? digit : displayValue + digit;
+    
     }
+  }
+//handle percentage 
+  const handlePercentage=(Operator)=>{
+    let { firstOperand, displayValue } = calculator;
+    if (firstOperand == null && !isNaN(displayValue)) {
+      calculator.firstOperand = displayValue;
+      }
+    if(Operator==="%" && !isNaN(calculator.firstOperand)){
+      const result = calculate(calculator.firstOperand, displayValue, Operator);
+  
+      calculator.displayValue = result;
+      calculator.firstOperand = result;
+        //return;
+        }
+  }
+  //backspace method 
+  const backspace=()=>{
+    let displayValue = calculator.displayValue;
+    //let arrString =[];
+    if(displayValue!=null && !isNaN(displayValue)){
+      displayValue= displayValue.substr(0, displayValue.length - 1)
+      // arrString = Array.from(displayValue);
+      // arrString.pop();
+    }
+    calculate.displayValue=displayValue;
+    calculate.firstOperand =displayValue;
+    return;
   }
 //refatored the update method 
 const updateDisplay=()=>{
