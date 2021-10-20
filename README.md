@@ -8,7 +8,7 @@ Features:
 4) division 
 5) percentage
 6) clear screen 
-7)remove an element one by one using backspace
+7) remove an element one by one using backspace
 
 Used :
 Css ,html and javascript 
