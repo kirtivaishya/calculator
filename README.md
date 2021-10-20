@@ -1,6 +1,14 @@
 # calculator
 the design is as per the challenege given 
 it takes 2 inputs as operands and perform opernation on click of next consecutive operator click .
+Features:
+1) Substraction 
+2) addition 
+3) mutiplication 
+4) division 
+5) percentage
+6) clear screen 
+7)remove an element one by one using backspace
 
 Used :
 Css ,html and javascript 
