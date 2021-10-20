@@ -11,8 +11,10 @@ javascript files
 and cypres test cases 
 
 # Calculotor looks like:
-[calculator](Capture.PNG)
+[calculator](Capture.PNG)<img width="260" alt="Capture" src="https://user-images.githubusercontent.com/66835272/138044261-60aeb2f2-f4df-46ea-8ffc-fb1b86d26114.PNG">
+
+
 
 # test case
 [testcase](testcase.PNG)
- 
+ <img width="587" alt="testcase" src="https://user-images.githubusercontent.com/66835272/138044293-6d7c0193-984a-4f58-8cb0-76a5ce2f89e0.PNG">
